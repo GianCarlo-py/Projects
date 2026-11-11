@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gian's personal portfolio showcasing his background, projects, certificates, and contact information.">
+    <meta name="theme-color" content="#0A0F1C">
+
+    <title>Gian | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="home-page">
+
+    <!-- HEADER AND NAVIGATION -->
+    <header class="site-header">
+        <a href="#home" class="logo">Gian</a>
+
+        <button class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="sidebar"
+                aria-expanded="false">
+            <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <nav id="sidebar" aria-label="Main navigation">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HOME SECTION -->
+        <section class="home" id="home">
+
+            <div class="home-img">
+                <img src="Media Assets/images/Profile.jpg"
+                     alt="Portrait of Gian">
+            </div>
+
+            <div class="home-content">
+                <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
+
+                <h1>Hi, it's <span>Gian</span></h1>
+
+               <h3 class="typing-text">I'm a <span></span> </h3>
+
+                <p class="home-intro">
+                    The future awaits, and I'm ready to embrace it with passion,
+                    creativity, and a commitment to growth.
+                    Explore my work, learn about my journey, and let's connect!
+                </p>
+
+                <div class="social-icons" aria-label="Social media links">
+                    <a href="https://www.facebook.com/share/1AnafSAhgX/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Facebook">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+
+                    <a href="https://www.instagram.com/duntongiancarlo/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </div>
+
+                <a class="primary-button" href="#projects">
+                    Explore My Work
+                </a>
+            </div>
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+        <section class="about" id="about">
+
+            <div class="about-content">
+                <p class="eyebrow">GET TO KNOW ME</p>
+
+                <h2>About <span>Me</span></h2>
+
+                <p>
+                    Hello! I'm <strong>Gian</strong>, a passionate student and
+                    aspiring developer with a love for learning, creating, and
+                    solving problems. Whether it's coding a project, taking on
+                    a challenge, or exploring new technologies, I always give
+                    it my best.
+                </p>
+
+                <p>
+                    Outside of tech, I'm also a gamer and someone who
+                    appreciates creativity in all its forms. My goal is to
+                    grow every day—both as a developer and as a person.
+                </p>
+
+                <div class="about-details">
+                    <div>
+                        <span class="detail-label">Education</span>
+                        <p>BS Computer Science Student</p>
+                    </div>
+
+                    <div>
+                        <span class="detail-label">Interests</span>
+                        <p>Programming, technology, gaming, and creativity</p>
+                    </div>
+
+                    <div>
+                        <span class="detail-label">Current Goal</span>
+                        <p>Continue learning and building useful applications</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PROJECTS SECTION -->
+        <section class="portfolio-section projects" id="projects">
+
+            <div class="section-heading">
+                <p class="eyebrow">WHAT I'VE BEEN BUILDING</p>
+
+                <h2>My <span>Projects</span></h2>
+
+                <p>
+                    Some of the projects I've worked on during my learning journey.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- PROJECT 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="Media Assets/images/project1.png"
+                             alt="Screenshot of project one"
+                             loading="lazy">
+                    </div>
+
+                    <div class="project-content">
+                        <p class="card-kicker">PROJECT 01</p>
+
+                        <h3>Project Title</h3>
+
+                        <p class="project-description">
+                            Replace this text with a clear explanation of the
+                            project's purpose, the problem it addresses, and
+                            what you personally contributed.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a href="#"
+                           class="project-link"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View Project ↗
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- PROJECT 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="Media Assets/images/project2.png"
+                             alt="Screenshot of project two"
+                             loading="lazy">
+                    </div>
+
+                    <div class="project-content">
+                        <p class="card-kicker">PROJECT 02</p>
+
+                        <h3>Project Title</h3>
+
+                        <p class="project-description">
+                            Describe another project, its main features, the
+                            tools or programming languages used, and what you
+                            learned while developing it.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>MySQL</span>
+                        </div>
+
+                        <a href="#"
+                           class="project-link"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View Project ↗
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- CERTIFICATES SECTION -->
+        <section class="portfolio-section certificates" id="certificates">
+
+            <div class="section-heading">
+                <p class="eyebrow">LEARNING AND ACHIEVEMENTS</p>
+
+                <h2>My <span>Certificates</span></h2>
+
+                <p>
+                    Training, certifications, and achievements I've earned.
+                </p>
+            </div>
+
+            <div class="certificates-grid">
+
+                <!-- CERTIFICATE 1 -->
+                <article class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="Media Assets/images/certificate-1.png"
+                             alt="HTML Essential Course certificate"
+                             loading="lazy">
+                    </div>
+
+                    <div class="certificate-content">
+                        <h3>HTML Essential Course</h3>
+                        <p>Cisco Networking Academy</p>
+                        <time class="certificate-date" datetime="2025-05">
+                            May, 2025
+                        </time>
+                    </div>
+                </article>
+
+
+                <!-- CERTIFICATE 2 -->
+                <article class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="Media Assets/images/certificate2.jpg"
+                             alt="Certificate two"
+                             loading="lazy">
+                    </div>
+
+                    <div class="certificate-content">
+                        <h3>Certificate Title</h3>
+                        <p>Issuing Organization</p>
+                        <time class="certificate-date" datetime="2026">
+                            Month, Year
+                        </time>
+                    </div>
+                </article>
+
+
+                <!-- CERTIFICATE 3 -->
+                <article class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="Media Assets/images/certificate3.jpg"
+                             alt="Certificate three"
+                             loading="lazy">
+                    </div>
+
+                    <div class="certificate-content">
+                        <h3>Certificate Title</h3>
+                        <p>Issuing Organization</p>
+                        <time class="certificate-date" datetime="2026">
+                            Month, Year
+                        </time>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- CONTACT SECTION -->
+        <section class="contact-section" id="contact">
+
+            <div class="section-heading">
+                <p class="eyebrow">LET'S CONNECT</p>
+
+                <h2>Contact <span>Me</span></h2>
+
+                <p>
+                    Have a question or want to connect?
+                    Feel free to reach out.
+                </p>
+            </div>
+
+            <div class="contact-content">
+
+                <a class="contact-item"
+                   href="mailto:your-email@example.com">
+
+                    <ion-icon name="mail-outline"></ion-icon>
+
+                    <span>
+                        <strong>Email</strong>
+                        <small>your-email@example.com</small>
+                    </span>
+                </a>
+
+
+                <a class="contact-item"
+                   href="https://www.facebook.com/share/1AnafSAhgX/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <ion-icon name="logo-facebook"></ion-icon>
+
+                    <span>
+                        <strong>Facebook</strong>
+                        <small>Connect with me on Facebook</small>
+                    </span>
+                </a>
+
+
+                <a class="contact-item"
+                   href="https://www.instagram.com/duntongiancarlo/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <ion-icon name="logo-instagram"></ion-icon>
+
+                    <span>
+                        <strong>Instagram</strong>
+                        <small>Follow me on Instagram</small>
+                    </span>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>
+            © <span id="current-year">2026</span>
+            Gian's Portfolio. All rights reserved.
+        </p>
+
+        <p>
+            <a href="#home">Back to top ↑</a>
+        </p>
+    </footer>
+
+
+    <!-- IONICONS -->
+    <script type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+    </script>
+
+    <script nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+    </script>
+
+    <!-- YOUR JAVASCRIPT -->
+    <script src="script.js" defer></script>
+
+</body>
+</html>
