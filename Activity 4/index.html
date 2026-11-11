@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="Media Assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Media Assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Media Assets/images/favicon-16x16.png">
+    <link rel="manifest" href="Media Assets/images/site.webmanifest">
+    <title>Minato Namikaze</title>
+</head>
+<body>
+   <header>
+    <nav id="navbar">
+      <div class="nav-brand"><a href="#">Minato Namikaze</a></div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#" class="nav-link">Home</a></li>
+        <li><a href="#bio" class="nav-link">Biography</a></li>
+        <li><a href="#media" class="nav-link">Media</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle">&#9776;</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section class="section">
+      <h1>Minato Namikaze <br>"The Yellow Flash"</h1>
+      <img src="Media Assets/images/MinatoPro.jpg" alt="Minato Namikaze" class="hero-img" />
+      <p id="Intro">
+       <mark>Minato Namikaze</mark> (波風ミナト, Namikaze Minato) served as the Fourth Hokage (四代目火影, Yondaime Hokage, meaning "Fourth Fire Shadow") of Konohagakure. Widely known as the <mark>"Yellow Flash of the Leaf"</mark> (木ノ葉の黄色い閃光, Konoha no Kiiroi Senkō), he gained global recognition for his incredible speed and strength. During the Nine-Tailed Demon Fox's attack on the village, Minato gave his life to protect it—sealing half of the Nine-Tails within himself and the other half inside his newborn son, Naruto Uzumaki.
+      </p>  
+    </section>
+
+    <!-- Biography Section -->
+    <section id="bio" class="section">
+      <h2>Biography / Backstory</h2>
+      <p id="biography">
+        Name: Minato Namikaze (波風ミナト) <br>
+    		Title: Fourth Hokage (四代目火影, Yondaime Hokage)<br>
+    		Alias: The Yellow Flash of the Leaf (木ノ葉の黄色い閃光, Konoha no Kiiroi Senkō)<br>
+    		Birthplace: Konohagakure (Hidden Leaf Village)<br>
+    		Affiliation: Konohagakure<br>
+    		Clan: Namikaze Clan<br>
+    		Family: Kushina Uzumaki (wife), Naruto Uzumaki (son)<br>
+      </p>
+      <p id="backstory">
+        Minato entered Konoha's Academy with the dream of earning the villagers' respect and recognition by becoming Hokage.When Kushina Uzumaki moved to Konoha, she was placed in the same class as Minato. Minato was immediately drawn to her bright red hair, finding it beautiful. Minato was a natural prodigy as a ninja, the likes of which appears only once in a generation.When he was added to a genin unit, Team 6, under the leadership of Jiraiya. The Sannin took a special interest in Minato and took him on as his apprentice, teaching him many of his own signature abilities.In time, Minato's exceptional skills led Jiraiya to believe he might be the Child of the Prophecy, someone who would someday save the world.
+      </p>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media" class="slider">
+      <h2>Media Gallery</h2>
+      <div class="slides">
+        <img src="Media Assets/images/minato_chibi.jpg" alt="Minato Chibi" class="media-item" />
+        <img src="Media Assets/images/Team Jiraiya.jpg" alt="Team Jiraiya" class="media-item" />
+        <img src="Media Assets/images/minato_Fam.jpg" alt="Minato's Family" class="media-item" />
+        <img src="Media Assets/images/FatherAndSon.jpg" alt="Father And Son" class="media-item" />
+        <div class="video-wrapper">
+          <div class="video-title">My Video Tribute</div>
+          <video id="video-container" height="100%" width="100%" controls>
+            <source src="Media Assets/video/MyEdit.mp4" type="video/mp4">
+          </video>
+        </div>
+         <button class="prev" onclick="prevSlide()">&#10094</button>
+         <button class="next" onclick="nextSlide()">&#10095</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+    <br>
+    <footer>
+        © 2025 Minato Namikaze Tribute Page
+    </footer>
+    <br>
+</html>

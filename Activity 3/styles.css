@@ -1,0 +1,230 @@
+:root {
+    --suisei-blue: #4f7fcf;
+    --suisei-dark: #2c3e50;
+    --suisei-light: #a4c6f2;
+    --suisei-accent: #e0e0e0;
+}
+
+#Title{
+    color:var(--suisei-accent);
+    font-size: 40px;
+    font-family: Montserrat;
+    font-weight: bold;
+    text-align: center;
+    background: var(--suisei-blue);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    url('suibg.png') center/cover no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.output{
+    margin: auto;
+    padding: auto;
+}
+
+h3, p{
+    margin: auto;
+}
+
+.info-box{
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    color: var(--suisei-accent);
+    background-color: rgba(224, 224, 224, 0.1);
+    border-radius: 10px;
+    position: relative;
+}
+.overlay1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(224, 224, 224, 0.1); 
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+p{
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    color: var(--suisei-accent);
+   
+}
+h3{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--suisei-accent);
+
+}
+.info-box:hover .overlay1{
+    opacity: 1;
+
+}
+
+.gallery{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 20px;
+    flex-wrap: wrap;
+    background-color: rgba(120, 119, 119, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+}
+.yt-link{
+   color: var(--suisei-accent);
+   background-color: black;
+}
+.musicvid {
+    align-items: center;
+    background-size: cover;
+    max-height: 100px;
+    position: relative;
+    width: 465px;
+    height: 70px;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s ease; 
+}
+.musicvid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+   
+}
+.musicvid:hover .overlay {
+    background-color: rgba(0, 0, 0, .0);
+}
+.title{
+    position: absolute;
+    top: 45%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    color: var(--suisei-accent);
+    font-weight:300;
+    white-space: nowrap;
+    padding: 5px 15px;
+    border-radius: 5px; 
+    text-align: center;
+    
+}
+
+.projects{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: auto;
+    padding: 5px;
+    border-radius: 5px;
+}
+.project-item {
+    position: relative;
+    width: 470px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    }
+
+.project-item:hover .project-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    opacity: 1;
+}
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.project-content {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+.project-content h3 {
+    font-family: Poppins;
+    color: var(--suisei-accent);
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0;
+}
+.project-item:hover .project-content {
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+}
+.portrait{
+    width: 225px;
+    height: 300px;
+    background-color: var(--suisei-dark);
+    object-fit: contain;
+    transform: translate(1.25in, 0);
+    border-radius: 10px;
+}
+
+.music{
+    display:grid;
+    margin: auto;
+    width: 200px;
+    text-align: center;
+    font-size: 15px;
+    font-family: Poppins;
+    color: var(--suisei-accent);
+    background-color: var(--suisei-blue);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    position: relative;
+    background-size:cover;
+}
+.music:hover {
+    background-color: var(--suisei-light);
+    color: var(--suisei-dark);
+}
+
+footer{
+    font-family: Montserrat;
+    font-size: 25px;
+    background-color: var(--suisei-dark);
+    color: var(--suisei-accent);
+    text-align: center;    
+    padding: 10px;
+    border-radius: 10px;
+}

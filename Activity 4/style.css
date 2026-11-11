@@ -1,0 +1,292 @@
+:root{
+	--minato-yellow: #e4ca41;
+	--minato-blue: #215068;
+}
+
+@font-face {
+	font-family: ninjanaruto;
+		src: url('Media Assets/font/njnaruto.ttf');
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+    url('Media Assets/images/bg-img.jpg') center/cover no-repeat;
+}
+header {
+  background-color: var(--minato-blue);
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  border-radius: 5px;
+  top: 0;
+  z-index: 1000;
+}
+
+#navbar {
+  font-family: ninjanaruto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1208px;
+  margin: 0 auto;
+}
+.nav-brand a {
+  color: var(--minato-yellow);
+  font-weight: 600;
+  font-size: 35px;
+  text-decoration: none;
+  font-family: ninjanaruto;
+}
+li a{
+	font-family: ninjanaruto;
+	font-size: 20px;
+	color: var(--minato-yellow);
+	text-decoration: none;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+.nav-menu .nav-link 5
+{
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-menu .nav-link:hover,
+.nav-menu .nav-link:focus {
+  color: #fff9e3;
+  cursor: pointer;
+}
+/* NAVBAR TOGGLE BUTTON */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--minato-yellow);
+  cursor: pointer;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin: 0.5rem 0;
+  }
+
+  .slider {
+    width: 90%;
+    height: auto;
+  }
+
+  #video-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-img {
+    width: 90%;
+    height: auto;
+  }
+/* Responsive Navigation Menu */
+
+@media (max-width: 600px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  header {
+    padding: 1rem;
+  }
+}  
+}
+/* Improve Text Containers on Small Screens */
+@media (max-width: 480px) {
+  #Intro, #biography, #backstory {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+  }
+
+  .nav-brand {
+    font-size: 1.5rem;
+  }
+
+  li a {
+    font-size: 1rem;
+  }
+
+  .slider button {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+  }
+}
+/* Home Page */
+.section {
+  max-width: 900px;
+  margin: 2rem auto 3rem;
+  padding: 0 1rem;
+}
+h1, h2 {
+  font-family: ninjanaruto;
+  font-weight: 100;
+  color: var(--minato-yellow);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.hero-img {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgb(228,202,65);
+  transition: transform 0.3s;
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+}
+#Intro{
+  background: rgba(224, 224, 224, 0.4);
+  color: inherit;
+  text-align: center;		
+  max-width: 700px;
+  margin: 1rem auto;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+/* Biography/Backstory */
+#biography
+{
+  background: rgba(224, 224, 224, 0.4);
+  color: inherit;
+  text-align: left;		
+  max-width: 700px;
+  margin: 1rem auto;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+#backstory {
+  background: rgba(224, 224, 224, 0.4);
+  color: inherit;
+  text-align: justify;		
+  max-width: 700px;
+  margin: 1rem auto;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+/*Slider for image*/
+.slider {
+    margin: 0 auto; /* This centers it horizontally */
+    display: block;
+    align-items: center;
+    position: relative;
+    width: 500px;
+    height: 1000px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.slider img{
+    width: 100%;
+    display: none;
+    border-radius: 10px;
+}
+img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.slider button{
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+@keyframes fade {
+    from {opacity: .5}
+    to {opacity: 1}
+}
+/* Tribute Video */
+.video-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+.video-title {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  font-family: ninjanaruto;
+  font-size: 1.8rem;
+  color: var(--minato-yellow);
+  text-shadow: 2px 2px 5px black;
+  z-index: 2;
+  pointer-events: none;
+}
+#video-container
+{
+  margin-top: 100px;
+  border-radius: 10px;
+} 
+
+footer{
+    font-family: sans-serif;
+    font-size: 25px;
+    background-color: var(--minato-blue);
+    color: var(--minato-yellow);
+    text-align: center;    
+    padding: 20px;
+    border-radius: 10px;
+}
