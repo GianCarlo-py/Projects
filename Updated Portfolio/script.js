@@ -3,14 +3,14 @@
 ========================================= */
 
 const menuToggle = document.getElementById("menu-toggle");
-const sidebar = document.getElementById("sidebar");
+const mainNav = document.getElementById("main-nav");
 
-if (menuToggle && sidebar) {
+if (menuToggle && mainNav) {
 
     // Open and close the mobile menu
     menuToggle.addEventListener("click", () => {
 
-        const isOpen = sidebar.classList.toggle("active");
+        const isOpen = mainNav.classList.toggle("active");
 
         menuToggle.setAttribute("aria-expanded", String(isOpen));
 
@@ -25,11 +25,11 @@ if (menuToggle && sidebar) {
     });
 
     // Close the mobile menu after clicking a link
-    sidebar.querySelectorAll("a").forEach(link => {
+    mainNav.querySelectorAll("a").forEach(link => {
 
         link.addEventListener("click", () => {
 
-            sidebar.classList.remove("active");
+            mainNav.classList.remove("active");
 
             menuToggle.setAttribute("aria-expanded", "false");
 
@@ -51,7 +51,7 @@ let wordIndex = 0;      // which word we're on
 let letterIndex = 0;    // how many letters are showing
 let isDeleting = false; // are we typing or erasing?
 
-function type() {
+function typeNextLetter() {
     const currentWord = words[wordIndex];
 
     // Add or remove one letter
@@ -77,17 +77,17 @@ function type() {
         speed = 400;
     }
 
-    setTimeout(type, speed);
+    setTimeout(typeNextLetter, speed);
 }
 
-type();
+typeNextLetter();
 
 /* =========================================
    ACTIVE SIDEBAR HIGHLIGHTING
 ========================================= */
 
 const sections = document.querySelectorAll("main section[id]");
-const navLinks = document.querySelectorAll("#sidebar a");
+const navLinks = document.querySelectorAll("#main-nav a");
 
 
 // Function to highlight the active navigation link
@@ -123,7 +123,7 @@ navLinks.forEach(link => {
 
 
 // Automatically update the active link while scrolling
-const observer = new IntersectionObserver((entries) => {
+const sectionObserver = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
@@ -141,7 +141,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe every section
 sections.forEach(section => {
-    observer.observe(section);
+    sectionObserver.observe(section);
 });
 
 
@@ -160,8 +160,8 @@ if (window.location.hash) {
    AUTOMATIC FOOTER YEAR
 ========================================= */
 
-const yearElement = document.getElementById("current-year");
+const footerYear = document.getElementById("current-year");
 
-if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
+if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
 }
