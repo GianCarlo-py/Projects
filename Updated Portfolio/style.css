@@ -4,7 +4,6 @@
     --deep-navy: #0A0F1C;
     --electric-indigo: #3F00FF;
     --text-light: #F1F1F1;
-    --text-dark: #1E1E1E;
     --glow-blue: #00BFFF;
 }
 
@@ -32,26 +31,16 @@ body {
     color: white;
 }
 
-body.home-page {
-    height: auto;
-}
-
-
-
-
 /* =========================================
    HEADER AND NAVIGATION
 ========================================= */
 
 header {
-    margin-top: 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1rem 9%;
-    background-color: transparent;
-    filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,7 +48,6 @@ header {
 }
 
 .site-header {
-    margin-top: 0;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     background: rgba(10, 15, 28, 0.94);
@@ -89,16 +77,16 @@ nav a {
 
 /* Active sidebar navigation */
 
-#sidebar a {
+#main-nav a {
     position: relative;
     transition: 0.3s ease;
 }
 
-#sidebar a.active {
+#main-nav a.active {
     color: var(--primary-skyblue);
 }
 
-#sidebar a.active::after {
+#main-nav a.active::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -109,7 +97,7 @@ nav a {
     box-shadow: 0 0 8px var(--glow-blue);
 }
 
-#sidebar a:hover {
+#main-nav a:hover {
     color: var(--primary-skyblue);
 }
 
@@ -169,9 +157,9 @@ span {
     font-size: 2rem;
 }
 
-.home-content .label,
-.label,
-.card-kicker {
+.home-content .section-label,
+.section-label,
+.card-label {
     color: var(--accent-cyan);
     font-size: 1.3rem;
     font-weight: 700;
@@ -189,12 +177,7 @@ span {
     line-height: 1.7;
 }
 
-.home-img {
-    border-radius: 50%;
-}
-
-.home-img img {
-    position: relative;
+.home-image img {
     width: 32vw;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--electric-indigo);
@@ -202,7 +185,7 @@ span {
     transition: 0.2s linear;
 }
 
-.home-img img:hover {
+.home-image img:hover {
     transform: scale(1.03);
 }
 
@@ -238,10 +221,6 @@ span {
     min-width: 280px;
 }
 
-.typing-text span{
-    position: relative;
-}
-
 .typing-text span {
     border-right: 3px solid var(--primary-skyblue);
     padding-right: 4px;
@@ -251,25 +230,6 @@ span {
 @keyframes blink {
     50% {
         border-color: transparent;
-    }
-}
-
-@keyframes cursor{
-    to{
-        border-left: 3px solid ;
-    }
-}
-
-@keyframes words{
-    0%, 40%{
-        content: "Student";
-    }
-    41%, 60%{
-        content: "Developer";
-    }
-    61%, 100%{
-        content: "Gamer";
-
     }
 }
 
@@ -330,10 +290,6 @@ span {
     margin-top: 1.5rem;
 }
 
-.about-content span {
-    color: var(--primary-skyblue);
-}
-
 .about-details {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -349,7 +305,7 @@ span {
     background: rgba(17, 24, 39, 0.7);
 }
 
-.detail-label {
+.about-detail-label {
     display: block;
     margin-bottom: 0.8rem;
     color: var(--accent-cyan);
@@ -367,8 +323,7 @@ span {
    PROJECTS SECTION
 ========================================= */
 
-.portfolio-section,
-.contact-section {
+.page-section {
     min-height: 80vh;
     padding: 10rem 9% 7rem;
 }
@@ -387,10 +342,6 @@ span {
     margin-bottom: 1rem;
     color: var(--text-light);
     font-size: clamp(3rem, 5vw, 4.4rem);
-}
-
-.section-heading h2 span {
-    color: var(--primary-skyblue);
 }
 
 .section-heading > p:last-child {
@@ -446,7 +397,7 @@ span {
     padding: 2.4rem;
 }
 
-.project-content .card-kicker {
+.project-content .card-label {
     margin-bottom: 0.8rem;
 }
 
@@ -464,14 +415,14 @@ span {
     line-height: 1.7;
 }
 
-.project-tech {
+.project-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
     margin-bottom: 2rem;
 }
 
-.project-tech span {
+.project-tags span {
     padding: 0.6rem 1.1rem;
     border: 1px solid var(--glow-blue);
     border-radius: 2rem;
@@ -548,7 +499,7 @@ span {
    CONTACT SECTION
 ========================================= */
 
-.contact-section {
+.contact {
     min-height: 65vh;
     background: var(--deep-navy);
 }
@@ -624,7 +575,6 @@ span {
 
 .site-footer a {
     color: var(--primary-skyblue);
-    text-decoration: none;
 }
 
 .site-footer a:hover {
@@ -653,7 +603,6 @@ span {
 
 @media (max-width: 995px) {
 
-    /* backdrop-filter breaks the fixed sidebar, so turn it off here */
     .site-header {
         backdrop-filter: none;
         background: var(--deep-navy);
@@ -707,7 +656,7 @@ span {
         gap: 4rem;
     }
 
-    .home-img img {
+    .home-image img {
         width: 40vw;
     }
 }
@@ -747,7 +696,7 @@ span {
         margin: 0;
     }
 
-    .home-img img {
+    .home-image img {
         width: min(65vw, 300px);
         height: auto;
     }
@@ -773,8 +722,7 @@ span {
         font-size: 1.6rem;
     }
 
-    .portfolio-section,
-    .contact-section {
+    .page-section {
         padding: 9rem 5% 5rem;
     }
 
@@ -788,17 +736,6 @@ span {
         height: 210px;
     }
 
-    .activity-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .examlab-card {
-        padding: 1rem;
-    }
-
-    .examlab-card h2 {
-        font-size: 1.8rem;
-    }
 }
 
 /* Small mobile screens */
@@ -809,26 +746,6 @@ span {
         width: 75%;
     }
 
-    .examlab-card {
-        padding: 0.8rem;
-    }
-
-    .examlab-card img {
-        padding: 0.3rem;
-    }
-
-    .examlab-card h2 {
-        font-size: 1.6rem;
-    }
-
-    .activity-grid {
-        gap: 3rem;
-        padding: 1rem;
-    }
-
-    .activity-img-container {
-        height: 230px;
-    }
 }
 
 /* Reduced motion accessibility */
